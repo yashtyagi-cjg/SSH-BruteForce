@@ -9,7 +9,6 @@ PORT = None
 
 
 def ssh_bruteforce(path_userlist, path_passlist):
-
     if not os.path.exists(path_userlist) or not os.path.exists(path_passlist):
         print('No such USERLIST/PASSLIST exists')
         quit()
@@ -25,7 +24,6 @@ def ssh_bruteforce(path_userlist, path_passlist):
 
 
 # Function to try and connect to the ssh client
-# If multi threading to be implemented. It will be better to pass just the username rather than the path to files
 def ssh_connection(username, password):
     global IP_ADDRESS, PORT
 
@@ -59,7 +57,6 @@ def parse_arguments():
     parser.add_argument("-uL", metavar="USERNAME LIST", help="path to file containing usernames")
     parser.add_argument("-uP", metavar="PASSWORD LIST", help="path to file containing passwords")
 
-    # args = parser.parse_args()
     return parser.parse_args()
 
 
